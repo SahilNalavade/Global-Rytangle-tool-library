@@ -1,0 +1,14 @@
+# api.notion.com is a well-known public host. Every request additionally needs a Notion-Version
+# header — the skills pass it explicitly; it is a protocol requirement, not a credential.
+id: notion
+base_url: "https://api.notion.com"
+network_allowlist: ["api.notion.com"]
+credential_refs:
+  token: "op://Engineering/Notion/token"
+auth:
+  scheme: bearer
+  token_key: token
+notes: >-
+  Internal integration token (team-shared, not per-user). Notion grants NOTHING by default: each
+  page or database must be explicitly shared with the integration in the Notion UI, so the agent's
+  reach is exactly what a human chose to share. Reads return only shared content.

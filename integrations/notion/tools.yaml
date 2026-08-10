@@ -1,0 +1,20 @@
+notion_search:
+  write: false
+  connection: notion
+  required_credentials: ["op://Engineering/Notion/token"]
+  network_allowlist: ["api.notion.com"]
+  description: "Search pages and databases shared with the integration (read-only)."
+
+notion_read_page:
+  write: false
+  connection: notion
+  required_credentials: ["op://Engineering/Notion/token"]
+  network_allowlist: ["api.notion.com"]
+  description: "Read a Notion page's block content (read-only)."
+
+notion_append_blocks:
+  write: true
+  connection: notion
+  required_credentials: ["op://Engineering/Notion/token"]
+  network_allowlist: ["api.notion.com"]
+  description: "Append blocks to an existing Notion page (write)."

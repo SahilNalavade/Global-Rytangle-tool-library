@@ -7,7 +7,7 @@ tools: ["jira_create_issue"]
 required_credentials: ["op://Engineering/Jira/api_token", "op://Engineering/Jira/email"]
 network_allowlist: ["*.atlassian.net"]
 needs_approval: true
-model_tier: standard
+model_tier: mid
 trigger_patterns: ["create a ticket", "file an issue", "raise a bug", "open a jira"]
 status: active
 ---

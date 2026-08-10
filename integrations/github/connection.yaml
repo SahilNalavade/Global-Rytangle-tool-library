@@ -1,0 +1,12 @@
+# api.github.com is a well-known public host — no tenant-specific base URL to collect.
+id: github
+base_url: "https://api.github.com"
+network_allowlist: ["api.github.com"]
+credential_refs:
+  token: "op://Engineering/GitHub/token"
+auth:
+  scheme: bearer
+  token_key: token
+notes: >-
+  Team-shared fine-grained PAT (not per-user). Grant it only the repositories the agent should see —
+  the agent's reach IS the token's reach. Read scopes: Contents, Issues, Pull requests, Metadata.

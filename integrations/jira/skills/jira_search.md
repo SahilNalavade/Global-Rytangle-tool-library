@@ -7,7 +7,7 @@ tools: ["jira_search"]
 required_credentials: ["op://Engineering/Jira/api_token", "op://Engineering/Jira/email"]
 network_allowlist: ["*.atlassian.net"]
 needs_approval: false
-model_tier: standard
+model_tier: mid
 trigger_patterns: ["jira", "issue", "ticket", "sprint", "backlog"]
 status: active
 ---

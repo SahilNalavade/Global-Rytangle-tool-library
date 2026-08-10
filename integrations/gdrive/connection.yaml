@@ -1,0 +1,15 @@
+# service_account (Part 6.3): the kernel mints a short-lived OAuth2 access token from the SA JSON
+# key and sends it as Bearer. Team-shared identity, no per-user impersonation.
+id: gdrive
+base_url: "https://www.googleapis.com/drive/v3"
+network_allowlist: ["www.googleapis.com"]
+credential_refs:
+  service_account: "op://Engineering/GoogleDrive/service_account_json"
+auth:
+  scheme: service_account
+  service_account_key: service_account
+  scopes: ["https://www.googleapis.com/auth/drive.readonly"]
+notes: >-
+  READ-ONLY by design — a write scope belongs in a separate, explicitly-approved connection
+  (Part 5.6). Access is granted by SHARING files or folders with the service account's email
+  address, so the agent sees exactly what a human chose to share and nothing else.

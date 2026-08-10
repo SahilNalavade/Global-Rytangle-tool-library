@@ -61,9 +61,13 @@ content through the real `parseSkill` and `loadConnections`. Add content, run th
 
 | Env var | Meaning |
 |---|---|
-| `LIBRARY_REPO` | `owner/repo`. **Unset ⇒ the feature is dormant** and nothing changes. |
+| `LIBRARY_REPO` | `owner/repo` (a full GitHub URL is accepted and canonicalized). **Unset ⇒ the feature is dormant** and nothing changes. |
 | `LIBRARY_REF` | Tag or SHA. Required whenever `LIBRARY_REPO` is set. |
 | `LIBRARY_DIR` | Clone destination, default `/data/library`. Must be outside the kernel repo. |
+
+Current test library — `SahilNalavade/Global-Rytangle-tool-library` @ `v1.0.0` (public). It is cloned
+with `GIT_TOKEN` via `authUrl()`, the same credential the brain repo uses, so a library hosted
+outside github.com would need that path revisited.
 
 The clone is read-only, refreshed on the existing 60s brain poll (no new timer), and deliberately
 does **not** take the brain repo's single-writer lock — see decisions.md #214.

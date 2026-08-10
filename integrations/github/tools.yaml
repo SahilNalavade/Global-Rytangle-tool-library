@@ -1,0 +1,20 @@
+github_search_issues:
+  write: false
+  connection: github
+  required_credentials: ["op://Engineering/GitHub/token"]
+  network_allowlist: ["api.github.com"]
+  description: "Search GitHub issues and pull requests with the search API (read-only)."
+
+github_read_file:
+  write: false
+  connection: github
+  required_credentials: ["op://Engineering/GitHub/token"]
+  network_allowlist: ["api.github.com"]
+  description: "Read a file's contents from a GitHub repository (read-only)."
+
+github_create_issue:
+  write: true
+  connection: github
+  required_credentials: ["op://Engineering/GitHub/token"]
+  network_allowlist: ["api.github.com"]
+  description: "Open a new GitHub issue (write)."

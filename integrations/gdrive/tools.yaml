@@ -1,0 +1,13 @@
+gdrive_search:
+  write: false
+  connection: gdrive
+  required_credentials: ["op://Engineering/GoogleDrive/service_account_json"]
+  network_allowlist: ["www.googleapis.com"]
+  description: "Search Google Drive files shared with the service account (read-only)."
+
+gdrive_read_doc:
+  write: false
+  connection: gdrive
+  required_credentials: ["op://Engineering/GoogleDrive/service_account_json"]
+  network_allowlist: ["www.googleapis.com"]
+  description: "Read the plain text of a Google Doc or text file (read-only)."

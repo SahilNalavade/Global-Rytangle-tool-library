@@ -1,0 +1,3 @@
+id: github
+version: "1.0.0"
+description: "Search issues and pull requests, read files, and open issues on the team's GitHub repositories."

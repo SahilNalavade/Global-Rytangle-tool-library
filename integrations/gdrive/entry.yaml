@@ -1,0 +1,3 @@
+id: gdrive
+version: "1.0.0"
+description: "Search the team's Google Drive and read the text of Docs and files shared with the agent."
