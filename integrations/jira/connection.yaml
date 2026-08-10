@@ -1,0 +1,13 @@
+# base_url_ref, not base_url: the tenant's Atlassian host is not knowable at authoring time and is
+# collected through the credential form (connections.ts resolves the ref at runtime).
+id: jira
+base_url_ref: "op://Engineering/Jira/base_url"
+network_allowlist: ["*.atlassian.net"]
+credential_refs:
+  api_token: "op://Engineering/Jira/api_token"
+  email: "op://Engineering/Jira/email"
+auth:
+  scheme: basic
+  token_key: api_token
+  username_key: email
+notes: "Team-shared service credential (not per-user). Installed from the tool library."

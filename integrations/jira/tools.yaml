@@ -1,0 +1,13 @@
+jira_search:
+  write: false
+  connection: jira
+  required_credentials: ["op://Engineering/Jira/api_token", "op://Engineering/Jira/email"]
+  network_allowlist: ["*.atlassian.net"]
+  description: "Search Jira issues with JQL (read-only)."
+
+jira_create_issue:
+  write: true
+  connection: jira
+  required_credentials: ["op://Engineering/Jira/api_token", "op://Engineering/Jira/email"]
+  network_allowlist: ["*.atlassian.net"]
+  description: "Create a Jira issue (write)."
