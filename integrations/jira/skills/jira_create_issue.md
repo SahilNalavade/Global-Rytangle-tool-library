@@ -4,7 +4,7 @@ kind: capability
 description: "Use this when someone asks to create, file, raise or open a new Jira issue or ticket."
 template: standard
 tools: ["jira_create_issue"]
-required_credentials: ["op://Engineering/Jira/api_token", "op://Engineering/Jira/email"]
+required_credentials: ["op://Engineering/Jira/base_url", "op://Engineering/Jira/api_token", "op://Engineering/Jira/email"]
 network_allowlist: ["*.atlassian.net"]
 needs_approval: true
 model_tier: mid

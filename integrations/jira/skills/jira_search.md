@@ -4,7 +4,7 @@ kind: capability
 description: "Use this when someone asks to find, search, list or look up Jira issues by project, status, assignee or text."
 template: standard
 tools: ["jira_search"]
-required_credentials: ["op://Engineering/Jira/api_token", "op://Engineering/Jira/email"]
+required_credentials: ["op://Engineering/Jira/base_url", "op://Engineering/Jira/api_token", "op://Engineering/Jira/email"]
 network_allowlist: ["*.atlassian.net"]
 needs_approval: false
 model_tier: mid
