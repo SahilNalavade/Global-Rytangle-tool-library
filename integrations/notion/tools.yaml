@@ -18,3 +18,10 @@ notion_append_blocks:
   required_credentials: ["op://Engineering/Notion/token"]
   network_allowlist: ["api.notion.com"]
   description: "Append blocks to an existing Notion page (write)."
+
+notion_create_page:
+  write: true
+  connection: notion
+  required_credentials: ["op://Engineering/Notion/token"]
+  network_allowlist: ["api.notion.com"]
+  description: "Create a new page under an existing parent page (write)."
